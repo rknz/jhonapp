@@ -353,6 +353,8 @@ ul.persona_menu_items {
     opacity: 0;
     transition: ease opacity 0.5s;
     z-index: 3;
+    display: none;
+    visibility: hidden;
 }
 
 #nav.showpersonas #personaDropdown {
@@ -407,6 +409,7 @@ ul.persona_menu_items {
     transition: ease opacity 0.5s;
     padding: 5px 22px;
     z-index: 3;
+    display: none;
 }
 
 #scenariosDropdown:before {
@@ -782,6 +785,8 @@ ul.timeline li:after {
     align-items: center;
     transition: ease all 0.3s;
     z-index: 4;
+    display: none;
+    visibility: hidden;
 }
 
 #preshowoverlay {
@@ -847,6 +852,8 @@ button.returnButton {
 
 #exitoverlay.exitcheck {
     bottom: 0;
+    display: inline-flex;
+    visibility: visible;
 }
 
 .preshowContent h1 {
@@ -885,28 +892,21 @@ button.startButton {
 /* Media Query For Safari In IPad */
 
 
-/* @media (max-width: 1024px){
-    body{
-        background: rgb(252, 219, 219);
-    }
-    .intro_container h1 {
-        top: 0;
-    }
-    .intro_container {
-        background-position: left bottom 50%;
-    }
-
-} */
-
 @media (max-width: 992px) {
     img.logo {
         width: 40px;
         max-width: 100%;
     }
+    .playnav button {
+        width: 153px;
+    }
 
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
+    .container{
+        margin: 0 auto;
+    }
     .intro_footer {
         padding: 1rem 2rem;
     }
@@ -917,6 +917,9 @@ button.startButton {
     .intro_footer p {
         font-size: 1rem;
         line-height: normal;
+    }
+    .playnav button {
+        width: 153px;
     }
 
 }
@@ -938,6 +941,9 @@ button.startButton {
     }
     .persona_menu h2 {
         margin-bottom: 5%;
+    }
+    .playnav button {
+        width: 153px;
     }
 
 }
