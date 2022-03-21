@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>Create new data set - BD Alaris™ Communication Engine Demo</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="script.js"></script>
+	<!-- Set number of steps in this demo -->
+	<script>
+	var stepcount = 5;
+	</script>
+	<style>
+	/* Set number of steps in this demo */
+				:root { --steps: 5;
+				/* The number of step bars = steps -1 */
+				--stepbars:calc(var(--steps) - 1);}
+	</style>
+</head>
+	
+
+<body class="pharma_section playscreen">
+	<!--Fade effect add-->
+	<script>
+    document.body.classList.add('fade');
+  	</script>
+	
+	<div id="viewercontainer" class="viewercontainer container" data-step="1">
+		
+		<!--ITEM 1-->
+		<div class="viewer item-1 active">
+			<img src="images/screen-sample.jpg" alt="screen sample" />
+		</div>
+		<div class="description item-1 active">
+		<p>Let’s take a look at the four most common deployment strategies for Data Sets.</p>
+		</div>
+		
+		<!--ITEM 2-->
+		<div class="viewer item-2">
+			<img src="images/screen-sample-2.jpg" alt="screen sample" />
+		</div>
+		<div class="description item-2">
+		<p>This is the second screen and the text to go with it.</p>
+		</div>
+		
+		<!--ITEM 3-->
+		<div class="viewer item-3">
+			<img src="images/screen-sample-3.jpg" alt="screen sample" />
+		</div>
+		<div class="description item-3">
+		<p>This is the third screen and the text to go with it.</p>
+		</div>
+		
+		<div class="playbar">
+			
+			<ul class="timeline">
+	<li data-text="Lorem ipsum dolor sit amet, consectetur."><i class="fa fa-fw fa-caret-down"></i></li>
+	<li data-text="Lorem ipsum dolor sit amet, consectetur."><i class="fa fa-fw fa-caret-down"></i></li>
+	<li data-text="Lorem ipsum dolor sit amet, consectetur."><i class="fa fa-fw fa-caret-down"></i></li>
+	<li data-text="Lorem ipsum dolor sit amet, consectetur."><i class="fa fa-fw fa-caret-down"></i></li>
+	<li data-text="Lorem ipsum dolor sit amet, consectetur."><i class="fa fa-fw fa-caret-down"></i></li>
+</ul>
+		</div>
+	</div>	
+
+	
+	
+	<!--Bottom Navbar -->
+	<div id="nav">
+		<a href="./index.html"><img src="images/bd-logo.png" alt="BD" id="nav_logo" /></a>
+		<div onclick="togglePersonas()" id="personaslink" class="navbutton personaslink"><i class="fa fa-fw fa-group"></i></div>
+				<! -- Persona Dropdown -->
+				<div id="personaDropdown" class="dropdown-content ">
+					<div class="persona_cards">
+						<a href="pharmacist.html" onClick="returnconfirm('Exit this demo?')">
+							<div class="pharma_card">
+								<img src="images/pharmacist.png" alt="Pharmacist" />
+								<p>Pharmacist</p>
+							</div>
+						</a>
+						<a href="clinician.html" onClick="returnconfirm('Exit this demo?')">
+							<div class="clinic_card">
+							<img src="images/clinician.png" alt="Clinician" />
+							<p>Clinician</p>
+							</div>
+						</a>
+						<a href="biomed.html">
+							<div class="biomed_card" onClick="returnconfirm('Exit this demo?')">
+							<img src="images/biomed.png" alt="Biomedical Engineer" />
+							<p>Biomedical Engineer</p>
+							</div>
+						</a>
+					</div>
+				</div>
+		<div onclick="toggleScenarios()" id="scenarioslink" class="navbutton menu_link"><i class="fa fa-fw fa-list-ul"></i></div>
+		        <!--Scenarios Dropdown -->
+				<div id="scenariosDropdown" class="sdropdown-content ">
+					<ul class="persona_menu_items">
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+			</ul>
+				</div>
+		<div onclick="toggleExit()" class="navbutton exit_link"><i class="fa fa-fw fa-sign-out fa-rotate-180"></i></div>
+		
+		<div class="playnav">
+		<button onclick="prev()" class="previous"><i class="fa fa-fw fa-angle-double-left"></i>Previous</button>
+		<button onclick="next()" class="next">Next<i class="fa fa-fw fa-angle-double-right"></i></button>
+			
+	</div>
+	</div>
+		
+	<!--Exit intent screen -->
+	<div id="exitoverlay" class="">
+		<div class="exitContent">
+			<h1>Exit this demo?</h1>
+			<button onclick="location.href='pharmacist.html';" class="exitButton">Exit now</button>
+			<button onclick="toggleExit()" class="returnButton">Return to demo</button>
+		</div>
+	</div>
+	
+	<!--Opening overlayscreen -->
+	<div id="preshowoverlay" class="">
+		<div class="preshowContent">
+			<h1>Clinical<br>Deployment Groups</h1>
+			<p>The Clinical – Deployment Groups module allows Pharmacists or Biomedical Engineers to deploy assign a Data Set to a pump or set of pumps</p>
+			<button onclick="togglePreshow()" class="startButton">Start demo</button>
+			<a onclick="history.back()" ><i class="fa fa-fw fa-chevron-left"></i> Back to scenarios</a>
+		</div>
+	</div>
+	
+<!-- Fade effect remove -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.setTimeout(function() {
+        document.body.classList.remove('fade');
+      }, 230);
+    });
+  </script>
+	
+</body>
+</html>

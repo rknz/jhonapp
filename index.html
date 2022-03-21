@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>BD Alaris™ Communication Engine Demo</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="script.js"></script>
+</head>
+
+<body class="p1">
+	<script>
+		// Fade effect add
+		document.body.classList.add('fade');
+		</script>
+	<div class="intro_container">
+		<img src="images/bd-logo.png" alt="BD Logo" class="logo"/>
+		<h1>BD Alaris™ Communication Engine Demo</h1>
+		<div class="intro_text">
+			<p class="standfirst">Making infusion experience safer, simpler and smarter through BD award-winning IT technology and connectivity solutions</p>
+			<p>This presentation gives a quick overview of the features of the Alaris™ Communication Engine.</p>
+			<p>The actions depicted here are intended to provide a click-by-click navigation across the user interface.</p>
+			<a href="personas.html" class="primary_button">Enter</a>
+		</div>
+	</div>
+	<div class="intro_footer"><p>The purposes are demonstration and training. Disclaimer: The screenshots, although not real, are representative of the actual product. Patient names and clinical stories are fictitious. Any similarity with actual patient histories would be a coincidence. BD, the BD Logo and Alaris are trademarks of Becton, Dickinson and Company or its affiliates. © 2022 BD. All rights reserved.</p></div>
+	<script>
+	// Fade effect remove 
+		document.addEventListener("DOMContentLoaded", () => {
+		window.setTimeout(function() {
+			document.body.classList.remove('fade');
+		}, 230);
+		});
+  	</script>
+</body>
+</html>

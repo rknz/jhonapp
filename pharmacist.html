@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>Pharmacist - BD Alaris™ Communication Engine Demo</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="script.js"></script>
+</head>
+
+<body class="pharma_page persona_menu_page">
+	<script>
+	// --Fade effect add--
+    document.body.classList.add('fade');
+  	</script>
+	<div class="container">
+		<h1>BD Alaris™ Communication Engine</h1>
+	<div class="flex_container">	
+		<div class="persona_cards">
+			<a>
+				<div class="pharma_card">
+					<img src="images/pharmacist.png" alt="Pharmacist" />
+					<p>Pharmacist</p>
+				</div>
+			</a>
+		</div>
+		<div class="persona_menu">
+			<h2>Pharmacist demo scenarios</h2>
+			<ul class="persona_menu_items">
+				<li><a href="pharma1.html">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Deployment Groups Concept</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Amend an existing data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create deployment groups</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Import a data sets</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Download CQI data and create reports</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Infusions</a><i class="fa fa-fw fa-chevron-right"></i></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	
+	<!-- Bottom Navbar  -->
+	<div id="nav">
+		<a href="./index.html"><img src="images/bd-logo.png" alt="BD" id="nav_logo" /></a>
+		<div onclick="togglePersonas()" id="personaslink" class="navbutton personaslink"><i class="fa fa-fw fa-group"></i></div>
+				<! -- Persona Dropdown -->
+				<div id="personaDropdown" class="dropdown-content ">
+					<div class="persona_cards">
+						<a href="pharmacist.html">
+							<div class="pharma_card">
+								<img src="images/pharmacist.png" alt="Pharmacist" />
+								<p>Pharmacist</p>
+							</div>
+						</a>
+						<a href="clinician.html">
+							<div class="clinic_card">
+							<img src="images/clinician.png" alt="Clinician" />
+							<p>Clinician</p>
+							</div>
+						</a>
+						<a href="biomed.html">
+							<div class="biomed_card">
+							<img src="images/biomed.png" alt="Biomedical Engineer" />
+							<p>Biomedical Engineer</p>
+							</div>
+						</a>
+					</div>
+				</div>
+		<div onclick="toggleScenarios()" id="scenarioslink" class="navbutton menu_link"><i class="fa fa-fw fa-list-ul"></i></div>
+		        <!-- Scenarios Dropdown -->
+				<div id="scenariosDropdown" class="sdropdown-content ">
+					<ul class="persona_menu_items">
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+				<li><a href="#">Create a new data set</a><i class="fa fa-fw fa-chevron-right"></i></li>
+			</ul>
+				</div>
+		<div onclick="location.href='personas.html';" class="navbutton exit_link"><i class="fa fa-fw fa-sign-out fa-rotate-180"></i></div>
+	</div>
+	
+	<!-- -- End Bottom Navbar --> 
+	<script>
+		// Fade effect remove
+		document.addEventListener("DOMContentLoaded", () => {
+		window.setTimeout(function() {
+			document.body.classList.remove('fade');
+		}, 230);
+		});
+  	</script>
+	
+</body>
+</html>
